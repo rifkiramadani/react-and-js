@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Helo World</h1>
+    <p id="output"></p>
+    <button class="button" onclick="clickMe()">Klik saya</button>
+    <button class="button2">Klik saya 2x</button>
+
+
+
+    <script>
+        //dom event
+        function clickMe(){
+            document.getElementById('output').textContent = 'HALOOOOOO';
+        }
+    
+        const tombol2 = document.querySelector('.button2');
+        tombol2.addEventListener('click', function() {
+            document.getElementById('output').textContent = 'HALOOOOOOO2';
+        })
+    
+        //dom manipulation
+        const h1 = document.querySelector('h1');
+        h1.style.color = 'salmon';
+    
+        const p = document.createElement('p');
+        const body = document.querySelector('body');
+        body.appendChild(p);
+    </script>
+</body>
+</html>
